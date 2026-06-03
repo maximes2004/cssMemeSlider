@@ -8,41 +8,106 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
+    <main class="page-wrapper">
       <section class="slider">
-        <div class="slider__track">
-          <section class="slide slider__slide">
-            <img class="slide__img" src="/img/druzhko.jpg" alt="Дружко собирается рассказать про мемы" />
+        <h1>Веселые мемасы</h1>
+        <ul class="slider__track">
+          <li id="meme-1" class="slide slider__slide">
+            <img
+              class="slide__img"
+              src="/img/druzhko.jpg"
+              alt="Дружко собирается рассказать про мемы"
+            />
             <p class="slide__description">Мемы от Дружко</p>
-          </section>
-          <section class="slide slider__slide">
-            <img class="slide__img" src="img/lapenko_ustal.jpg" alt="Инженер из 'Внутри Лапенко' жалуется на усталость" />
+          </li>
+          <li id="meme-2" class="slide slider__slide">
+            <img
+              class="slide__img"
+              src="img/lapenko_ustal.jpg"
+              alt="Инженер из 'Внутри Лапенко' жалуется на усталость"
+            />
             <p class="slide__description">Инженер устал</p>
-          </section>
-          <section class="slide slider__slide">
-            <img class="slide__img" src="img/wisdom.jpg" alt="Темнокожий мужчина с умным видом говорит глупости" />
+          </li>
+          <li id="meme-3" class="slide slider__slide">
+            <img
+              class="slide__img"
+              src="img/wisdom.jpg"
+              alt="Темнокожий мужчина с умным видом говорит глупости"
+            />
             <p class="slide__description">Подумай над этим</p>
-          </section>
-          <section class="slide slider__slide">
-            <img class="slide__img" src="img/buildin_fire.jpg" alt="Упитанная черная женщина смешно реагирует на пожар" />
+          </li>
+          <li id="meme-4" class="slide slider__slide">
+            <img
+              class="slide__img"
+              src="img/buildin_fire.jpg"
+              alt="Упитанная черная женщина смешно реагирует на пожар"
+            />
             <p class="slide__description">My building is on fire!</p>
-          </section>
-          <section class="slide slider__slide">
-            <img class="slide__img" src="img/luka_gta.jpg" alt="Лукашенко с автоматом в мире GTA San Andreas" />
-            <p class="slide__description">Картофельный коммандос и его движуха</p>
-          </section>
-          <section class="slide slider__slide">
-            <img class="slide__img" src="img/astanavites.jpg" alt="Янукович, как в Матрице, пытается остановить пули словом 'Астанавитесь!'" />
+          </li>
+          <li id="meme-5" class="slide slider__slide">
+            <img
+              class="slide__img"
+              src="img/luka_gta.jpg"
+              alt="Лукашенко с автоматом в мире GTA San Andreas"
+            />
+            <p class="slide__description">
+              Картофельный коммандос и его движуха
+            </p>
+          </li>
+          <li id="meme-6" class="slide slider__slide">
+            <img
+              class="slide__img"
+              src="img/astanavites.jpg"
+              alt="Янукович, как в Матрице, пытается остановить пули словом 'Астанавитесь!'"
+            />
             <p class="slide__description">Волшебное слово от Януковича</p>
-          </section>
-        </div>
+          </li>
+        </ul>
         <nav class="slider__nav">
-          <a class="slider__nav-link" href="" aria-label="Слайд 1 из 6"></a>
-          <a class="slider__nav-link" href="" aria-label="Слайд 2 из 6"></a>
-          <a class="slider__nav-link" href="" aria-label="Слайд 3 из 6"></a>
-          <a class="slider__nav-link" href="" aria-label="Слайд 4 из 6"></a>
-          <a class="slider__nav-link" href="" aria-label="Слайд 5 из 6"></a>
-          <a class="slider__nav-link" href="" aria-label="Слайд 6 из 6"></a>
+          <ul class="slider__controls">
+            <li class="slider__control-item">
+              <a
+                class="slider__nav-link"
+                href="#meme-1"
+                aria-label="Слайд 1 из 6"
+              ></a>
+            </li>
+            <li class="slider__control-item">
+              <a
+                class="slider__nav-link"
+                href="#meme-2"
+                aria-label="Слайд 2 из 6"
+              ></a>
+            </li>
+            <li class="slider__control-item">
+              <a
+                class="slider__nav-link"
+                href="#meme-3"
+                aria-label="Слайд 3 из 6"
+              ></a>
+            </li>
+            <li class="slider__control-item">
+              <a
+                class="slider__nav-link"
+                href="#meme-4"
+                aria-label="Слайд 4 из 6"
+              ></a>
+            </li>
+            <li class="slider__control-item">
+              <a
+                class="slider__nav-link"
+                href="#meme-5"
+                aria-label="Слайд 5 из 6"
+              ></a>
+            </li>
+            <li class="slider__control-item">
+              <a
+                class="slider__nav-link"
+                href="#meme-6"
+                aria-label="Слайд 6 из 6"
+              ></a>
+            </li>
+          </ul>
         </nav>
       </section>
     </main>
