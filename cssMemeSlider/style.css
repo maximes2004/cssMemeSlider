@@ -108,7 +108,7 @@ ul {
   border-radius: 50%;
   outline: 0.2rem solid transparent;
   outline-offset: -0.7rem;
-  transition: all 0.1s ease;
+  transition: all 0.3s ease;
 }
 
 .slider__nav-link:hover {
@@ -136,7 +136,7 @@ ul {
   transition: opacity 0.9s ease-in-out;
 }
 
-/*Анимация элементов управления*/
+/*Анимация элементов управления (активное состояние)*/
 .slider:has(#meme-1:target)
   .slider__control-item:nth-child(1)
   .slider__nav-link {
@@ -184,6 +184,43 @@ ul {
   .slider__nav-link {
   background-color: #fffacd;
   outline: 0.2rem solid #ff00ff;
+}
+
+/*Анимация элементов управления (активное состояние при наведении)*/
+.slider:has(#meme-1:target)
+  .slider__control-item:nth-child(1)
+  .slider__nav-link:hover {
+  outline-color: #9400D3;
+}
+
+.slider:has(#meme-2:target)
+  .slider__control-item:nth-child(2)
+  .slider__nav-link:hover {
+  outline-color: #9400D3;
+}
+
+.slider:has(#meme-3:target)
+  .slider__control-item:nth-child(3)
+  .slider__nav-link:hover {
+  outline-color: #9400D3;
+}
+
+.slider:has(#meme-4:target)
+  .slider__control-item:nth-child(4)
+  .slider__nav-link:hover {
+  outline-color: #9400D3;
+}
+
+.slider:has(#meme-5:target)
+  .slider__control-item:nth-child(5)
+  .slider__nav-link:hover {
+  outline-color: #9400D3;
+}
+
+.slider:has(#meme-6:target)
+  .slider__control-item:nth-child(6)
+  .slider__nav-link:hover {
+  outline-color: #9400D3;
 }
 
 /*Движение ленты описаний*/
