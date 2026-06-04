@@ -131,6 +131,8 @@ ul {
 
 .slider__description {
   flex: 0 0 16.666%; /*Каждое описание 1/6 ширины окна*/
+  display: flex;
+  align-items: center;
   width: 16.666%;
   opacity: 0; /*По умолчанию прозрачно*/
   transition: opacity 0.9s ease-in-out;
