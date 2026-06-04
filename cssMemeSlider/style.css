@@ -1,0 +1,279 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.page-wrapper {
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #fffacd;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .slider {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .slider {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 0.5rem;
+  }
+}
+
+.slider__track {
+  max-width: 50rem;
+  display: flex;
+  width: 100%;
+  overflow-x: auto; /*Разрешаем горизонтальный скролл*/
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; /*Настройка Snap: по оси X, обязательное прилипание (mandatory)*/
+  /*Прячем нативную полосу прокрутки браузера для красоты*/
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /*Дополнительная строка для старых браузеров Microsoft*/
+}
+
+.slide {
+  flex: 0 0 100%; /*Каждый слайд строго 100% ширины окна*/
+  width: 100%;
+  scroll-snap-align: center; /*Точка прилипания: слайд должен выравниваться по центру (или старту) окна*/
+}
+
+.slide__img {
+  border-radius: 0.5rem;
+  max-width: 100%;
+}
+
+.slider__bottom-wrapper {
+  max-width: 50rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .slider__bottom-wrapper {
+    flex-direction: column;
+  }
+  .slider__controls {
+    justify-content: center;
+  }
+}
+
+.slider__controls {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.slider__control-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+}
+
+.slider__nav-link {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  box-sizing: content-box;
+  background-color: #8b4513;
+  border: 0.5rem solid #fffacd;
+  border-radius: 50%;
+  outline: 0.2rem solid transparent;
+  outline-offset: -0.7rem;
+  transition: all 0.3s ease;
+}
+
+.slider__nav-link:hover {
+  outline-color: #ff00ff;
+}
+
+.slider__descriptions-wrapper {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.slider__descriptions {
+  width: 600%;
+  display: flex;
+  flex-shrink: 0;
+  transition: transform 0.45s ease-in-out;
+  overflow: hidden;
+}
+
+.slider__description {
+  flex: 0 0 16.666%; /*Каждое описание 1/6 ширины окна*/
+  display: flex;
+  align-items: center;
+  width: 16.666%;
+  opacity: 0; /*По умолчанию прозрачно*/
+  transition: opacity 0.9s ease-in-out;
+}
+
+/*Анимация элементов управления (активное состояние)*/
+.slider:has(#meme-1:target)
+  .slider__control-item:nth-child(1)
+  .slider__nav-link {
+  background-color: #fffacd;
+  outline: 0.2rem solid #ff00ff;
+}
+
+.slider:has(#meme-2:target)
+  .slider__control-item:nth-child(2)
+  .slider__nav-link {
+  background-color: #fffacd;
+  outline: 0.2rem solid #ff00ff;
+}
+
+.slider:has(#meme-3:target)
+  .slider__control-item:nth-child(3)
+  .slider__nav-link {
+  background-color: #fffacd;
+  outline: 0.2rem solid #ff00ff;
+}
+
+.slider:has(#meme-4:target)
+  .slider__control-item:nth-child(4)
+  .slider__nav-link {
+  background-color: #fffacd;
+  outline: 0.2rem solid #ff00ff;
+}
+
+.slider:has(#meme-5:target)
+  .slider__control-item:nth-child(5)
+  .slider__nav-link {
+  background-color: #fffacd;
+  outline: 0.2rem solid #ff00ff;
+}
+
+.slider:has(#meme-6:target)
+  .slider__control-item:nth-child(6)
+  .slider__nav-link {
+  background-color: #fffacd;
+  outline: 0.2rem solid #ff00ff;
+}
+
+.slider:not(:has(:target))
+  .slider__control-item:nth-child(1)
+  .slider__nav-link {
+  background-color: #fffacd;
+  outline: 0.2rem solid #ff00ff;
+}
+
+/*Анимация элементов управления (активное состояние при наведении)*/
+.slider:has(#meme-1:target)
+  .slider__control-item:nth-child(1)
+  .slider__nav-link:hover {
+  outline-color: #9400D3;
+}
+
+.slider:has(#meme-2:target)
+  .slider__control-item:nth-child(2)
+  .slider__nav-link:hover {
+  outline-color: #9400D3;
+}
+
+.slider:has(#meme-3:target)
+  .slider__control-item:nth-child(3)
+  .slider__nav-link:hover {
+  outline-color: #9400D3;
+}
+
+.slider:has(#meme-4:target)
+  .slider__control-item:nth-child(4)
+  .slider__nav-link:hover {
+  outline-color: #9400D3;
+}
+
+.slider:has(#meme-5:target)
+  .slider__control-item:nth-child(5)
+  .slider__nav-link:hover {
+  outline-color: #9400D3;
+}
+
+.slider:has(#meme-6:target)
+  .slider__control-item:nth-child(6)
+  .slider__nav-link:hover {
+  outline-color: #9400D3;
+}
+
+/*Движение ленты описаний*/
+.slider:has(#meme-1:target) .slider__descriptions {
+  transform: translateX(0%);
+}
+
+.slider:has(#meme-2:target) .slider__descriptions {
+  transform: translateX(-16.666%);
+}
+
+.slider:has(#meme-3:target) .slider__descriptions {
+  transform: translateX(-33.333%);
+}
+
+.slider:has(#meme-4:target) .slider__descriptions {
+  transform: translateX(-50%);
+}
+
+.slider:has(#meme-5:target) .slider__descriptions {
+  transform: translateX(-66.666%);
+}
+
+.slider:has(#meme-6:target) .slider__descriptions {
+  transform: translateX(-83.333%);
+}
+
+/*Прозрачность каждого слайда*/
+.slider:has(#meme-1:target) .slider__description:nth-child(1) {
+  opacity: 1;
+}
+
+.slider:has(#meme-2:target) .slider__description:nth-child(2) {
+  opacity: 1;
+}
+
+.slider:has(#meme-3:target) .slider__description:nth-child(3) {
+  opacity: 1;
+}
+
+.slider:has(#meme-4:target) .slider__description:nth-child(4) {
+  opacity: 1;
+}
+
+.slider:has(#meme-5:target) .slider__description:nth-child(5) {
+  opacity: 1;
+}
+
+.slider:has(#meme-6:target) .slider__description:nth-child(6) {
+  opacity: 1;
+}
+
+/*Если на странице еще не выбран ни один таргет, показываем первое описание*/
+.slider:not(:has(:target)) .slider__description:nth-child(1) {
+  opacity: 1;
+}
