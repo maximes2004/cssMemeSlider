@@ -53,7 +53,7 @@ ul {
   scroll-snap-type: x mandatory; /*Настройка Snap: по оси X, обязательное прилипание (mandatory)*/
   /*Прячем нативную полосу прокрутки браузера для красоты*/
   scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /*Дополнительная строка для старых браузеров Microsoft*/
+  -ms-overflow-style: none; /*Для старых браузеров Microsoft*/
 }
 
 .slide {
